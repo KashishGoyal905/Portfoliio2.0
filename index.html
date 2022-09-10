@@ -28,6 +28,7 @@
             </div>
         </div>
     </div>
+
     <!-- about -->
     <div id="about">
         <div class="container">
@@ -41,25 +42,25 @@
                         fugit, cumque perferendis, facilis alias at saepe! Voluptas explicabo laudantium nam asperiores,
                         fugiat doloremque excepturi!</p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onClick="opentab('skiils')">Skills</p>
+                        <p class="tab-links" onClick="opentab('experience')">Experiences</p>
+                        <p class="tab-links" onClick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skiils">
                         <ul>
                             <li><span>Full Stack</span><br>Creating Websites</li>
                             <li><span>Java</span><br>hardcore language</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Full Stack</span><br>Creating Websites</li>
+                            <li><span>Full Stack2</span><br>Creating Websites</li>
                             <li><span>Java</span><br>hardcore language</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>Full Stack</span><br>Creating Websites</li>
+                            <li><span>Full Stack3</span><br>Creating Websites</li>
                             <li><span>Java</span><br>hardcore language</li>
                         </ul>
                     </div>
@@ -67,7 +68,35 @@
             </div>
         </div>
     </div>
-
+    <!-- -----Services--------- -->
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-titles">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, nobis nostrum, tempore soluta
+                        dolorum eveniet dignissimos quaerat quam placeat laudantium, accusantium maxime natus quasi aut
+                        nulla quae ipsam eaque ex.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>app design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, nobis nostrum, tempore soluta
+                        dolorum eveniet dignissimos quaerat quam placeat laudantium, accusantium maxime natus quasi aut
+                        nulla quae ipsam eaque ex.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>ui/ux design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, nobis nostrum, tempore soluta
+                        dolorum eveniet dignissimos quaerat quam placeat laudantium, accusantium maxime natus quasi aut
+                        nulla quae ipsam eaque ex.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 
