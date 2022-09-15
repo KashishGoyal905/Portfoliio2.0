@@ -6,7 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kashish Goyal - Portfolio</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -14,13 +22,17 @@
         <div class="container">
             <nav>
                 <h1 class="logo"><Span class="name">K</Span>ashish</h1>
-                <ul>
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#About">About</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#Services">Services</a></li>
-                    <li><a href="#Portfolio">Portfolio</a></li>
-                    <li><a href="#Contact">Contact</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contacts">Contact</a></li>
+                    <img class="icon"
+                        src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-cross-success-flatart-icons-lineal-color-flatarticons.png"
+                        width="45px" onclick="closeMenu()" />
                 </ul>
+                <img class="icon" src="https://img.icons8.com/nolan/64/menu.png" width="45px" onclick="openMenu()" />
             </nav>
             <div class="header-text">
                 <p>Full Stack Developer</p>
@@ -97,7 +109,81 @@
             </div>
         </div>
     </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-titles">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="/images/logo.png" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>it connects you to people</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/images/logo.png" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>it connects you to people</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/images/logo.png" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>it connects you to people</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <!-- ---contact--- -->
+    <div id="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>kashishgoyal961@gmail.com</p>
+                    <p>9050012132</p>
+                    <div class="social-icons">
+                        <a href=""></a>
+                        <a href=""></a> 
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                    <a href="Resume.docx" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="enter your name" required>
+                        <input type="email" name="Email" placeholder="enter your email address" required>
+                        <textarea name="Message" rows="6" placeholder="Enter your message" required></textarea>
+                        <button class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Kashish </p>
+        </div>
+    </div>
     <script src="app.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzZJ4M1dxBsFxFTakABvwjkr_4bHMxSNnFJjB5itHZn7JBcn8906Fceh5FyotZ0Bm_m/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => form.reset())
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 
 </html>
